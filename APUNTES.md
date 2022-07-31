@@ -73,5 +73,10 @@ La herencia en programación orientada a objetos, permite tener clases que extie
 
 >Una característica muy importante de la programación orientada a objetos es la capacidad que los objetos tienen para interactuar con otros
 
-- Usando la `parent::` podemos acceder a las caracteristicas de la clase padre de la cual extiende una clase determinada.
+- Usando la palabra clave `parent` y el operador de resolución de ámbito `::` podemos acceder a las caracteristicas de la clase padre de la cual extiende una clase determinada.
+
+### Principio Tell don’t ask
+
+> En vez de pedirle a un objeto información sobre sus datos y luego con ellos tomar decisiones que alteren el mismo objeto ... ***Lo mejor es decirle al objeto lo que quieres que haga***, y dejar que sea responsabilidad del propio objeto cambiar su estado
+
 
