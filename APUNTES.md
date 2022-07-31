@@ -68,3 +68,10 @@ La herencia en programación orientada a objetos, permite tener clases que extie
 - Esto también se aplica a los constructores a partir de PHP 5.4.
 
 **PHP no permite herencia multiple**
+
+## Interacción entre objetos
+
+>Una característica muy importante de la programación orientada a objetos es la capacidad que los objetos tienen para interactuar con otros
+
+- Usando la `parent::` podemos acceder a las caracteristicas de la clase padre de la cual extiende una clase determinada.
+
