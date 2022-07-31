@@ -52,3 +52,19 @@ Los setters son funciones que asignan valores a las variables de un objeto.
 
 Los getters son funciones que retornan los valores de las variables de un objeto.
 
+## Herencia
+
+La herencia en programación orientada a objetos, permite tener clases que extiendan de otras, heredando así sus propiedades y métodos no privados.
+
+- Una clase solo puede heredar propiedades y métodos que no sean privados, (visibilidad protected y public)
+
+### Clases Abastractas
+
+>PHP 5 introduce clases y métodos abstractos. Las clases definidas como abstractas no se pueden instanciar y cualquier clase que contiene al menos un método abstracto debe ser definida como tal. Los métodos definidos como abstractos simplemente declaran la firma del método, pero no pueden definir la implementación.
+
+- Todos los metodos definidos en la clase abstractas deben ser declarados en la clase que extiende a esta;
+- además, estos métodos deben ser definidos con la misma (o con una menos restrictiva) visibilidad;
+- las firmas de los métodos tienen que coincidir, es decir, la declaración de tipos y el número de argumentos requeridos deben ser los mismos.
+- Esto también se aplica a los constructores a partir de PHP 5.4.
+
+**PHP no permite herencia multiple**
