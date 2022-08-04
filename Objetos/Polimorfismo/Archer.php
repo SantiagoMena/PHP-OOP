@@ -25,4 +25,18 @@ class Archer extends Unit
     {
         return $this->damage;
     }
+
+    /**
+     * Método de infringir daño para la unidad `archer` 
+     *
+     * @param float $damage
+     * @return void
+     */
+    public function takeDamage(float $damage)
+    {
+        // infringir daño 50% de posibilidades
+        if(rand(0, 1)) {
+            return parent::takeDamage($damage);
+        }
+    }
 }

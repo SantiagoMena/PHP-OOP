@@ -5,6 +5,23 @@
 class Soldier extends Unit
 {
     protected float $damage = 10;
+    protected $armor;
+
+    public function __construct(string $name, $armor = 2) {
+        $this->armor = $armor;
+        parent::__construct($name);
+    }
+
+    /**
+     * Asignar valor del atributo `armor`
+     *
+     * @param [type] $armor
+     * @return void
+     */
+    public function setArmor($armor)
+    {
+        $this->armor = $armor;
+    }
 
     /**
      * Implementación de la función attack
@@ -27,7 +44,7 @@ class Soldier extends Unit
      */
     public function takeDamage(float $damage): void
     {
-        parent::takeDamage($damage / 2);
+        parent::takeDamage($damage / $this->armor);
     }
 
     /**
