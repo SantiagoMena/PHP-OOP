@@ -7,10 +7,14 @@ class Message
         echo "{$message}\n";
     }
 }
+
+/**
+ * Clase unidad de batalla
+ */
 abstract class Unit
 {
-    protected $health = 40;
-    protected $name;
+    protected float $health = 40;
+    protected string $name;
 
     public function __construct(string $name)
     {
@@ -18,49 +22,74 @@ abstract class Unit
     }
 
     /**
-     * Get the value of Name
+     * Obtener el valor del atributo `name`
+     *
+     * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * move Unit
+     * Mover la unidad a una dirección
+     *
+     * @param string $direction
+     * @return void
      */
-    public function move(string $direction)
+    public function move(string $direction): void
     {
         Message::show("{$this->name} avanza hacia {$direction}");
     }
 
     /**
-     * die Unit
+     * Método de muerte de la unidad
+     *
+     * @return void
      */
-    public function die()
+    public function die(): void
     {
         Message::show("{$this->name} muere");
     }
 
     /**
-     * Get the value of health
+     * Obtener el valor de `health`
+     *
+     * @return float
      */
-    public function getHealth()
+    public function getHealth(): float
     {
         return $this->health;
     }
 
     /**
-     * Set the value of health
+     * Asignar el valor de `health`
+     *
+     * @param float $health
+     * @return self
      */
-    public function setHealth($health): self
+    public function setHealth(float $health): self
     {
         $this->health = $health;
 
         return $this;
     }
+
+    /**
+     * Método abstracto de ataque a un oponente
+     *
+     * @param Unit $opponent
+     * @return void
+     */
     abstract public function attack(Unit $opponent): void; 
 
-    public function takeDamage($damage)
+    /**
+     * Método de infringir daño a una unidad
+     *
+     * @param float $damage
+     * @return void
+     */
+    public function takeDamage(float $damage): void
     {
         $this->setHealth($this->getHealth() - $damage);
 
@@ -72,9 +101,19 @@ abstract class Unit
     }
 }
 
+/**
+ * Clase unidad de batalla tipo Soldado
+ */
 class Soldier extends Unit
 {
-    protected $damage = 10;
+    protected float $damage = 10;
+
+    /**
+     * Implementación de la función attack
+     *
+     * @param Unit $opponent
+     * @return void
+     */
     public function attack(Unit $opponent): void
     {
         Message::show("{$this->name} golpea a {$opponent->getName()}");
@@ -82,13 +121,19 @@ class Soldier extends Unit
         $this->takeDamage($opponent->getDamage());
     }
 
-    public function takeDamage($damage)
+    /**
+     * Sobrecarga del método para infrigir daños en una unidad
+     *
+     * @param float $damage
+     * @return void
+     */
+    public function takeDamage(float $damage): void
     {
         return parent::takeDamage($damage / 2);
     }
 
     /**
-     * Get the value of damage
+     * Obtener el valor del atributo `damage`
      */
     public function getDamage()
     {
@@ -96,9 +141,19 @@ class Soldier extends Unit
     }
 }
 
+/**
+ * Clase unidad de batalla tipo Arquero
+ */
 class Archer extends Unit
 {
-    protected $damage = 20;
+    protected float $damage = 20;
+
+    /**
+     * Implementación de la función attack
+     *
+     * @param Unit $opponent
+     * @return void
+     */
     public function attack(Unit $opponent): void
     {
         Message::show("{$this->name} dispara a {$opponent->getName()}");
@@ -106,7 +161,7 @@ class Archer extends Unit
     }
 
     /**
-     * Get the value of damage
+     * Obtener el valor del atributo `damage`
      */
     public function getDamage()
     {
