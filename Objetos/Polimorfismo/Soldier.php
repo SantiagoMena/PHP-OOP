@@ -5,9 +5,9 @@
 class Soldier extends Unit
 {
     protected float $damage = 10;
-    protected $armor;
+    protected Armor $armor;
 
-    public function __construct(string $name, $armor = 2) {
+    public function __construct(string $name, Armor $armor = null) {
         $this->armor = $armor;
         parent::__construct($name);
     }
@@ -44,7 +44,11 @@ class Soldier extends Unit
      */
     public function takeDamage(float $damage): void
     {
-        parent::takeDamage($damage / $this->armor);
+        if($this->armor) {
+            $damage = $this->armor->absorbDamage($damage);
+        }
+
+        parent::takeDamage($damage);
     }
 
     /**
