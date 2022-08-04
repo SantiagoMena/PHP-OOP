@@ -5,10 +5,9 @@
 class Soldier extends Unit
 {
     protected float $damage = 10;
-    protected Armor $armor;
+    protected ?Armor $armor;
 
-    public function __construct(string $name, Armor $armor = null) {
-        $this->armor = $armor;
+    public function __construct(string $name) {
         parent::__construct($name);
     }
 
@@ -18,8 +17,9 @@ class Soldier extends Unit
      * @param [type] $armor
      * @return void
      */
-    public function setArmor($armor)
+    public function setArmor(?Armor $armor)
     {
+        Message::show($this->getName() . " ahora tiene una armadura.");
         $this->armor = $armor;
     }
 

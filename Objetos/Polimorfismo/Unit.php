@@ -41,6 +41,7 @@ abstract class Unit
     public function die(): void
     {
         Message::show("{$this->name} muere");
+        exit();
     }
 
     /**
