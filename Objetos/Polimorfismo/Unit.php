@@ -64,6 +64,8 @@ abstract class Unit
     {
         $this->health = $health;
 
+        Message::show("{$this->getName()} ahora tiene {$this->getHealth()} de vida");
+
         return $this;
     }
 
@@ -76,6 +78,16 @@ abstract class Unit
     abstract public function attack(Unit $opponent): void; 
 
     /**
+     * Método abstracto de absorber daño
+     *
+     * @param Unit $opponent
+     * @return void
+     */
+    protected function absorbDamage(float $damage): float{
+        return $damage;
+    }
+
+    /**
      * Método de infringir daño a una unidad
      *
      * @param float $damage
@@ -83,11 +95,9 @@ abstract class Unit
      */
     public function takeDamage(float $damage): void
     {
-        $this->setHealth($this->getHealth() - $damage);
-
-        Message::show("{$this->getName()} ahora tiene {$this->getHealth()} de vida");
+        $this->setHealth($this->health - $this->absorbDamage($damage));
         
-        if($this->getHealth() <= 0) {
+        if($this->health <= 0) {
             $this->die();
         }
     }

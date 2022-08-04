@@ -36,19 +36,20 @@ class Soldier extends Unit
         $this->takeDamage($opponent->getDamage());
     }
 
+    
     /**
-     * Sobrecarga del método para infrigir daños en una unidad
+     * Método absorber daño
      *
      * @param float $damage
-     * @return void
+     * @return float
      */
-    public function takeDamage(float $damage): void
+    protected function absorbDamage(float $damage): float
     {
         if($this->armor) {
             $damage = $this->armor->absorbDamage($damage);
         }
 
-        parent::takeDamage($damage);
+        return $damage;
     }
 
     /**
