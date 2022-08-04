@@ -4,8 +4,9 @@ require('Unit.php');
 require('Soldier.php');
 require('Archer.php');
 require('Armor.php');
+require('BronzeArmor.php');
 
-$armorSoldier = new Armor;
+$armorSoldier = new BronzeArmor;
 
 $silence = new Soldier("Silence");
 $silence->move("el norte");

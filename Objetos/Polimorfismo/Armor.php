@@ -1,9 +1,6 @@
 <?php
 
-class Armor
+interface Armor
 {
-    public function absorbDamage($damage)
-    {
-        return $damage / 2;
-    }
+    public function absorbDamage($damage): float;
 }
