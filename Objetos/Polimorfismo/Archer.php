@@ -32,11 +32,11 @@ class Archer extends Unit
      * @param float $damage
      * @return void
      */
-    public function takeDamage(float $damage)
+    public function takeDamage(float $damage): void
     {
         // infringir daño 50% de posibilidades
         if(rand(0, 1)) {
-            return parent::takeDamage($damage);
+            parent::takeDamage($damage);
         }
     }
 }
