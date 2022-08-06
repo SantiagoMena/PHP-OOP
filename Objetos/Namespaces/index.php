@@ -1,13 +1,12 @@
 <?php
-require('Message.php');
-require('Unit.php');
-require('Soldier.php');
-require('Archer.php');
-require('Armor.php');
-require('BronzeArmor.php');
+require 'src/Helpers/Message.php';
+
+spl_autoload_register(function($className) {
+    require "src/$className.php";
+});
+
 
 $armorSoldier = new BronzeArmor;
-
 $silence = new Soldier("Silence");
 $silence->move("el norte");
 $silence->setArmor($armorSoldier);
