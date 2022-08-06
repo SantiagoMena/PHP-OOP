@@ -79,4 +79,27 @@ La herencia en programación orientada a objetos, permite tener clases que extie
 
 > En vez de pedirle a un objeto información sobre sus datos y luego con ellos tomar decisiones que alteren el mismo objeto ... ***Lo mejor es decirle al objeto lo que quieres que haga***, y dejar que sea responsabilidad del propio objeto cambiar su estado
 
+## Interfaces y Polimorfismo
 
+>La palabra polimorfismo significa «múltiples formas» y en programación orientada a objetos puede tener varios significados, por ejemplo la habilidad que tiene un método dentro de un objeto con interactuar con diferentes objetos de diferentes clases de la misma forma pero con resultados diferentes. Esto se logra cuando creamos clases que tienen la misma interfaz (es decir los mismos métodos públicos) pero se comportan de manera diferente.
+
+## Autocarga de clases
+>En PHP 5 esto ya no es necesario. La función spl_autoload_register() registra cualquier número de autocargadores, posibilitando que las clases e interfaces sean cargadas automáticamente si no están definidas actualmente. Al registrar autocargadores, a PHP se le da una última oportunidad de cargar las clases o interfaces antes de que falle por un error.
+
+**Nota:**
+>La autocarga no está disponible si se utiliza PHP en el modo interactivo CLI.
+
+## PSR-1
+
+- Los ficheros deben tener codificación UTF-8 sin bom.
+- Los nombres de las clases deben utilizar la notación StudlyCaps (MyNameSpace/MiClase
+- El nombre de las constantes debe estar en mayúsculas.
+- Los nombres de los métodos deben declararse en notación camelCase (getUserOrders()).
+
+## Operador use
+
+Con el operador `use` se pueden importar clases.
+
+## Alias
+
+Con el operador `as` se puede asignar un alias a las importaciones de clases, otorgando un alias como nombre de clase importada.
