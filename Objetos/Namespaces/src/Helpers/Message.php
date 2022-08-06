@@ -1,4 +1,6 @@
 <?php
+namespace Source;
+
 /**
  * Clase para imprimir mensajes
  */

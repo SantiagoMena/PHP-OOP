@@ -1,4 +1,6 @@
 <?php
+namespace Source;
+
 /**
  * Clase unidad de batalla
  */

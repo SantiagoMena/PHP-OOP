@@ -1,8 +1,17 @@
 <?php
+namespace Source;
+
 require 'src/Helpers/Message.php';
 
+
 spl_autoload_register(function($className) {
-    require "src/$className.php";
+    if(strpos($className, 'Source\\') === 0) {
+        $className = str_replace('Source\\', '', $className);
+
+        if(file_exists("./src/$className.php")) {
+            require "src/$className.php";
+        }
+    }
 });
 
 
