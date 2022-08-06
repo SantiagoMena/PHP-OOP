@@ -1,6 +1,8 @@
 <?php
 namespace Source;
 
+use Warcraft\Armor;
+
 /**
  * Clase unidad de batalla tipo Soldado
  */

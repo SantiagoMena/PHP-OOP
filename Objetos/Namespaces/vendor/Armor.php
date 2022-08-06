@@ -1,5 +1,5 @@
 <?php
-namespace Source;
+namespace Warcraft;
 
 interface Armor
 {

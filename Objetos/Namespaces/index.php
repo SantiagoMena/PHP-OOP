@@ -2,6 +2,7 @@
 namespace Source;
 
 require 'src/Helpers/Message.php';
+require 'vendor/Armor.php';
 
 
 spl_autoload_register(function($className) {
