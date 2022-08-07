@@ -1,6 +1,11 @@
 {
-    "name": "santiagomena/oop",
+    "name": "source/oop",
     "type": "project",
     "license": "MIT",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Source\\": "src/"
+        }
+    }
 }

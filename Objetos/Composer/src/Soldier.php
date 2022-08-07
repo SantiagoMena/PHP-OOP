@@ -1,7 +1,7 @@
 <?php
 namespace Source;
 
-use Warcraft\Armor;
+use Source\Helpers\Message;
 
 /**
  * Clase unidad de batalla tipo Soldado

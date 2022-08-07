@@ -1,8 +1,7 @@
 <?php
 namespace Source;
 
-use Warcraft\Armor as WarcraftArmor;
-class SilverArmor implements WarcraftArmor
+class SilverArmor implements Armor
 {
     public function absorbDamage($damage): float
     {

@@ -1,6 +1,8 @@
 <?php
 namespace Source;
 
+use Source\Helpers\Message;
+
 /**
  * Clase unidad de batalla tipo Arquero
  */
