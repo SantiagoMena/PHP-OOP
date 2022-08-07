@@ -88,7 +88,7 @@ class Unit
      */
     public function takeDamage(Attack $attack): void
     {
-        $this->setHealth($this->health - $this->absorbDamage($attack));
+        $this->setHealth($this->health - $this->armor->absorbDamage($attack));
         
         if($this->health <= 0) {
             $this->die();
@@ -105,16 +105,6 @@ class Unit
     {
         Message::show($this->getName() . " ahora tiene una armadura.");
         $this->armor = $armor;
-    }
-    /**
-     * Método absorber daño
-     *
-     * @param float $damage
-     * @return float
-     */
-    protected function absorbDamage(Attack $attack): float
-    {
-        return $this->armor->absorbDamage($attack);
     }
 
     /**

@@ -3,10 +3,6 @@ namespace Source\Armors;
 
 use Source\Attack;
 
-class MissingArmor implements Armor
+class MissingArmor extends Armor
 {
-    public function absorbDamage(Attack $attack): float
-    {
-        return $attack->getDamage();
-    }
 }
