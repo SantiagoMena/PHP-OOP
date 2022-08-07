@@ -1,5 +1,5 @@
 <?php
-namespace Source;
+namespace Source\Armors;
 
 interface Armor
 {

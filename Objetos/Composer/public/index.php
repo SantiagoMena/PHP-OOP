@@ -1,6 +1,8 @@
 <?php
 namespace Source;
 
+use Source\Armors\BronzeArmor;
+
 require __DIR__.'/../vendor/autoload.php';
 
 $armorSoldier = new BronzeArmor;

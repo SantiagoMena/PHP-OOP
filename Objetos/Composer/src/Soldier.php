@@ -1,6 +1,7 @@
 <?php
 namespace Source;
 
+use Source\Armors\Armor;
 use Source\Helpers\Message;
 
 /**
