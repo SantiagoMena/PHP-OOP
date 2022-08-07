@@ -2,9 +2,8 @@
 namespace Source\Weapons;
 
 use Source\Unit;
-use Source\Weapons\Bow;
 
-class CrossBow extends Bow
+class CrossBow extends Weapon
 {
     protected $damage = 40;
     
