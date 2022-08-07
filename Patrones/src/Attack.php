@@ -1,5 +1,4 @@
 <?php
-
 namespace Source;
 
 class Attack
