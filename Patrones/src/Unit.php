@@ -4,6 +4,7 @@ namespace Source;
 use Helpers\Message;
 use Source\Armors\Armor;
 use Source\Weapons\Weapon;
+use Source\Armors\MissingArmor;
 
 /**
  * Clase unidad de batalla
@@ -19,6 +20,7 @@ class Unit
     {
         $this->name = $name;
         $this->weapon = $weapon;
+        $this->armor = new MissingArmor();
     }
 
     /**
@@ -112,11 +114,7 @@ class Unit
      */
     protected function absorbDamage(Attack $attack): float
     {
-        if($this->armor) {
-            $damage = $this->armor->absorbDamage($attack);
-        }
-
-        return $damage;
+        return $this->armor->absorbDamage($attack);
     }
 
     /**
