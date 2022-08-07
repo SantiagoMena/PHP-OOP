@@ -2,7 +2,7 @@
 namespace Source;
 
 use Source\Armors\Armor;
-use Source\Helpers\Message;
+use Helpers\Message;
 
 /**
  * Clase unidad de batalla tipo Soldado

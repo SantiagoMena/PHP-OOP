@@ -1,7 +1,7 @@
 <?php
 namespace Source;
 
-use Source\Helpers\Message;
+use Helpers\Message;
 
 /**
  * Clase unidad de batalla

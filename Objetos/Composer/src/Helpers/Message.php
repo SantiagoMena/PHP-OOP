@@ -1,5 +1,5 @@
 <?php
-namespace Source\Helpers;
+namespace Helpers;
 
 /**
  * Clase para imprimir mensajes
