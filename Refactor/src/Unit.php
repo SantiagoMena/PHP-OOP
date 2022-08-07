@@ -2,6 +2,7 @@
 namespace Source;
 
 use Helpers\Message;
+use Source\Armors\Armor;
 
 /**
  * Clase unidad de batalla
@@ -10,10 +11,16 @@ abstract class Unit
 {
     protected float $health = 40;
     protected string $name;
+    protected ?Armor $armor = null;
+    protected float $damage = 20;
 
-    public function __construct(string $name)
+    public function __construct(string $name, $damage = null)
     {
         $this->name = $name;
+
+        if($damage) {
+            $this->damage = $damage;
+        }
     }
 
     /**
@@ -82,16 +89,6 @@ abstract class Unit
     abstract public function attack(Unit $opponent): void; 
 
     /**
-     * Método abstracto de absorber daño
-     *
-     * @param Unit $opponent
-     * @return void
-     */
-    protected function absorbDamage(float $damage): float{
-        return $damage;
-    }
-
-    /**
      * Método de infringir daño a una unidad
      *
      * @param float $damage
@@ -104,5 +101,31 @@ abstract class Unit
         if($this->health <= 0) {
             $this->die();
         }
+    }
+
+    /**
+     * Asignar valor del atributo `armor`
+     *
+     * @param [type] $armor
+     * @return void
+     */
+    public function setArmor(?Armor $armor)
+    {
+        Message::show($this->getName() . " ahora tiene una armadura.");
+        $this->armor = $armor;
+    }
+    /**
+     * Método absorber daño
+     *
+     * @param float $damage
+     * @return float
+     */
+    protected function absorbDamage(float $damage): float
+    {
+        if($this->armor) {
+            $damage = $this->armor->absorbDamage($damage);
+        }
+
+        return $damage;
     }
 }

@@ -19,7 +19,7 @@ class Archer extends Unit
     public function attack(Unit $opponent): void
     {
         Message::show("{$this->name} dispara a {$opponent->getName()}");
-        $this->takeDamage($this->damage);
+        $opponent->takeDamage($this->damage);
     }
 
     /**
