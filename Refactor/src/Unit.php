@@ -3,23 +3,24 @@ namespace Source;
 
 use Helpers\Message;
 use Source\Armors\Armor;
+use Source\Weapons\Weapon;
 
 /**
  * Clase unidad de batalla
  */
-abstract class Unit
+class Unit
 {
     protected float $health = 40;
     protected string $name;
     protected ?Armor $armor = null;
-    protected float $damage = 20;
+    protected Weapon $weapon;
 
-    public function __construct(string $name, $damage = null)
+    public function __construct(string $name, Weapon $weapon)
     {
         $this->name = $name;
 
-        if($damage) {
-            $this->damage = $damage;
+        if($weapon) {
+            $this->weapon = $weapon;
         }
     }
 
@@ -81,14 +82,6 @@ abstract class Unit
     }
 
     /**
-     * Método abstracto de ataque a un oponente
-     *
-     * @param Unit $opponent
-     * @return void
-     */
-    abstract public function attack(Unit $opponent): void; 
-
-    /**
      * Método de infringir daño a una unidad
      *
      * @param float $damage
@@ -127,5 +120,17 @@ abstract class Unit
         }
 
         return $damage;
+    }
+
+    /**
+     * Implementación de la función attack
+     *
+     * @param Unit $opponent
+     * @return void
+     */
+    public function attack(Unit $opponent): void
+    {
+        Message::show($opponent->weapon->getDescription($this, $opponent));
+        $opponent->takeDamage($this->weapon->getDamage());
     }
 }
