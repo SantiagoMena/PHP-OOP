@@ -124,4 +124,17 @@ Composer cuenta con la opción `files` en el parametro autoload del archivo `com
 
 Cada vez que se modifique algo en el archivo `composer.json` se correr el comando `composer dump-autoload` para generar los archivos de autoload.
 
-#
+## Patron Factory
+
+>En OOP, factory se refiere a un objeto o método que tiene por objetivo crear o instancias otros objetos.
+
+## Patron Value Object
+
+>Los value objects nos permiten agrupar grupos de valores que tienen sentido juntos pero no tienen sentido separados.
+
+Ejemplo:
+
+- Dinero: new Money(50, 'USD'); // cantidad y tipo de moneda
+- Coordenadas: new Coordinates('38.898648N', '77.037692W'); // latitud y longitud
+- Fecha: new Date(2016, 07, 21); //año, mes, día
+
