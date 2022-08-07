@@ -18,10 +18,7 @@ class Unit
     public function __construct(string $name, Weapon $weapon)
     {
         $this->name = $name;
-
-        if($weapon) {
-            $this->weapon = $weapon;
-        }
+        $this->weapon = $weapon;
     }
 
     /**
@@ -130,7 +127,17 @@ class Unit
      */
     public function attack(Unit $opponent): void
     {
-        Message::show($opponent->weapon->getDescription($this, $opponent));
+        Message::show($this->weapon->getDescription($this, $opponent));
         $opponent->takeDamage($this->weapon->getDamage());
+    }
+
+    /**
+     * Set the value of weapon
+     */
+    public function setWeapon(Weapon $weapon): self
+    {
+        $this->weapon = $weapon;
+
+        return $this;
     }
 }
