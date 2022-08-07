@@ -5,10 +5,7 @@ use Source\Unit;
 
 class CrossBow extends Weapon
 {
-    protected $damage = 40;
-    
-    public function getDescription(Unit $attacker, Unit $opponent): string
-    {
-        return "{$attacker->getName()} lanza una flecha con la ballesta a {$opponent->getName()}";
-    }
+    protected float $damage = 40;
+    protected bool $magical = false;
+    protected string $description = ':unit lanza una flecha a :opponent';
 }

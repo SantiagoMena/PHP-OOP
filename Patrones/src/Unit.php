@@ -84,9 +84,9 @@ class Unit
      * @param float $damage
      * @return void
      */
-    public function takeDamage(float $damage): void
+    public function takeDamage(Attack $attack): void
     {
-        $this->setHealth($this->health - $this->absorbDamage($damage));
+        $this->setHealth($this->health - $this->absorbDamage($attack));
         
         if($this->health <= 0) {
             $this->die();
@@ -110,10 +110,10 @@ class Unit
      * @param float $damage
      * @return float
      */
-    protected function absorbDamage(float $damage): float
+    protected function absorbDamage(Attack $attack): float
     {
         if($this->armor) {
-            $damage = $this->armor->absorbDamage($damage);
+            $damage = $this->armor->absorbDamage($attack);
         }
 
         return $damage;
@@ -127,8 +127,9 @@ class Unit
      */
     public function attack(Unit $opponent): void
     {
-        Message::show($this->weapon->getDescription($this, $opponent));
-        $opponent->takeDamage($this->weapon->getDamage());
+        $attack = $this->weapon->createAttack();
+        Message::show($attack->getDescription($this, $opponent));
+        $opponent->takeDamage($attack);
     }
 
     /**

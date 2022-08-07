@@ -6,10 +6,7 @@ use Source\Weapons\Weapon;
 
 class BasicSword extends Weapon
 {
-    protected $damage = 20;
-    
-    public function getDescription(Unit $attacker, Unit $opponent): string
-    {
-        return "{$attacker->getName()} ataca con la espada a {$opponent->getName()}";
-    }
+    protected float $damage = 20;
+    protected bool $magical = false;
+    protected string $description = ':unit ataca con la espada a :opponent';
 }

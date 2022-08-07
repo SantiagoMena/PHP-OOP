@@ -2,13 +2,11 @@
 namespace Source\Weapons;
 
 use Source\Unit;
+use Source\Attack;
 
 class BasicBow extends Weapon
 {
-    protected $damage = 20;
-
-    public function getDescription(Unit $attacker, Unit $opponent): string
-    {
-        return "{$attacker->getName()} lanza una flecha a {$opponent->getName()}";
-    }
+    protected float $damage = 20;
+    protected bool $magical = false;
+    protected string $description = ':unit lanza una flecha a :opponent';
 }

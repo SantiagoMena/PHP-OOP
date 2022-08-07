@@ -1,10 +1,15 @@
 <?php
 namespace Source\Armors;
+use Source\Attack;
 
 class SilverArmor implements Armor
 {
-    public function absorbDamage($damage): float
+    public function absorbDamage(Attack $attack): float
     {
-        return $damage / 3;
+        if($attack->isPhysical()) {
+            return $attack->getDamage() / 3;
+        }
+
+        return $attack->damage;
     }
 }
