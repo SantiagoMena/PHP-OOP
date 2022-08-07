@@ -106,3 +106,20 @@ Con el operador `use` se pueden importar clases.
 Con el operador `as` se puede asignar un alias a las importaciones de clases, otorgando un alias como nombre de clase importada.
 
 ## Composer
+
+## init
+
+Con el comando `composer init` se inicializa el proyecto de symfony generando el archivo `composer.json`
+
+### psr-4
+
+Composer cuenta con la opción `psr-4` en el parametro autoload del archivo `composer.json` para la autocarga archivos usando la recomendación PSR-4.
+https://www.php-fig.org/psr/
+
+### files
+
+Composer cuenta con la opción `files` en el parametro autoload del archivo `composer.json` para la autocarga archivos especificos indicados en una matriz.
+
+## dump-autoload
+
+Cada vez que se modifique algo en el archivo `composer.json` se correr el comando `composer dump-autoload` para generar los archivos de autoload.
