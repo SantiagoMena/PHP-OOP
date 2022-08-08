@@ -138,3 +138,21 @@ Ejemplo:
 - Coordenadas: new Coordinates('38.898648N', '77.037692W'); // latitud y longitud
 - Fecha: new Date(2016, 07, 21); //año, mes, día
 
+## La palabra reservada 'static'
+
+- >Declarar propiedades o métodos de clases como estáticos los hacen accesibles sin la necesidad de instanciar la clase.
+
+- >Una propiedad declarada como static no puede ser accedida con un objeto de clase instanciado (aunque un método estático sí lo puede hacer).
+
+### Métodos estáticos
+
+- >Debido a que los métodos estáticos se pueden invocar sin tener creada una instancia del objeto, la seudovariable $this no está disponible dentro de los métodos declarados como estáticos
+
+>**Advertencia
+En PHP 7, llamar a métodos no estáticos de forma estática está obsoleto y generará una advertencia E_DEPRECATED. El soporte para las llamadas a métodos no estáticos de forma estática podría ser eliminado en el futuro.**
+
+### Propiedades estáticas
+
+- >No se puede acceder a las propiedades estáticas a través del objeto utilizando el operador flecha (->).
+
+- >Como cualquier otra variable estática de PHP, las propiedades estáticas sólo pueden ser inicializadas utilizando un string literal o una constante; las expresiones no están permitidas. Por tanto, **se puede inicializar una propiedad estática con enteros o arrays (por ejemplo), pero no se puede hacer con otra variable**, con el valor de devolución de una función, o con un objeto.
