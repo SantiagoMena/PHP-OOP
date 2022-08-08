@@ -1,0 +1,12 @@
+{
+    "name": "source/oop",
+    "type": "project",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "files": ["src/Helpers/Message.php"],
+        "psr-4": {
+            "Source\\": "src/"
+        }
+    }
+}
