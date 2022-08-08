@@ -1,10 +1,11 @@
 <?php
 namespace Source\Armors;
+use Source\Attack;
 
-class BronzeArmor implements Armor
+class BronzeArmor extends Armor
 {
-    public function absorbDamage($damage): float
+    public function absorbMagicDamage(Attack $attack): float
     {
-        return $damage / 2;
+        return $attack->getDamage() / 2;
     }
 }

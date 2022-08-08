@@ -1,10 +1,11 @@
 <?php
 namespace Source\Armors;
+use Source\Attack;
 
-class SilverArmor implements Armor
+class SilverArmor extends Armor
 {
-    public function absorbDamage($damage): float
+    public function absorbPhysicalDamage(Attack $attack): float
     {
-        return $damage / 3;
+        return $attack->getDamage() / 3;
     }
 }
