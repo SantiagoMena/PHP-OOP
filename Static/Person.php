@@ -3,18 +3,18 @@ namespace Source;
 
 class Person
 {
-    protected String $name;
+    protected static String $name = 'Invitado';
 
     public function __construct(String $name) {
-        $this->name = $name;
+        static::$name = $name;
     }
 
     /**
      * Get the value of name
      */
-    public function getName(): String
+    public static function getName(): String
     {
-        return $this->name;
+        return static::$name;
     }
 }
 
