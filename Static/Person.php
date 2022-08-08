@@ -3,23 +3,37 @@ namespace Source;
 
 class Person
 {
-    protected static String $name = 'Invitado';
+    protected String $name;
+    protected static String $database = 'mysql';
+    public static String $table = 'people';
 
     public function __construct(String $name) {
-        static::$name = $name;
+        $this->name = $name;
     }
 
     /**
      * Get the value of name
      */
-    public static function getName(): String
+    public function getName(): String
     {
-        return static::$name;
+        return $this->name;
+    }
+
+    
+    function save()
+    {
+        echo "Saving {$this->name} in the table " . static::$table . "\n";
     }
 }
 
-$juan = new Person('Juan');
+Person::$table = 'personas';
+
 $jhon = new Person('Jhon');
+$jhon->save();
+
+$juan = new Person('Juan');
+$juan->save();
+
 
 echo "{$juan->getName()}\n";
 echo "{$jhon->getName()}";
