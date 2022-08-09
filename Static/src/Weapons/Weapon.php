@@ -6,10 +6,14 @@ abstract class Weapon
 {
     protected float $damage = 0;
     protected bool $magical = false;
-    protected string $description = ':unit ataca a :opponent';
 
     public function createAttack(): Attack
     {
-        return new Attack($this->damage, $this->magical, $this->description);
+        return new Attack($this->damage, $this->magical, $this->getDescriptionKey());
+    }
+
+    protected function getDescriptionKey()
+    {
+        return str_replace('Source\Weapons\\', '', get_class($this)).'Attack';
     }
 }

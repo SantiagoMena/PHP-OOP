@@ -129,4 +129,12 @@ class Unit
 
         return $this;
     }
+
+    /**
+     * Get the value of weapon
+     */
+    public function getWeapon(): Weapon
+    {
+        return $this->weapon;
+    }
 }
