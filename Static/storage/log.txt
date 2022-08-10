@@ -1,0 +1,20 @@
+(2022-08-10 00:33:00) Silence ahora tiene una armadura.
+(2022-08-10 00:33:00) Silence ahora tiene una armadura.
+(2022-08-10 00:33:00) Silence avanza hacia el norte
+(2022-08-10 00:33:00) Arquero ahora tiene una armadura.
+(2022-08-10 00:33:00) Arquero lanza tres flechas a Silence
+(2022-08-10 00:33:00) Silence ahora tiene 26.666666666667 de vida
+(2022-08-10 00:33:00) Silence ataca con la espada a Arquero
+(2022-08-10 00:33:00) Arquero ahora tiene 33.333333333333 de vida
+(2022-08-10 00:33:00) Arquero lanza tres flechas a Silence
+(2022-08-10 00:33:00) Silence ahora tiene 13.333333333333 de vida
+(2022-08-10 00:47:08) Silence ahora tiene una armadura.
+(2022-08-10 00:47:08) Silence ahora tiene una armadura.
+(2022-08-10 00:47:08) Silence avanza hacia el norte
+(2022-08-10 00:47:08) Arquero ahora tiene una armadura.
+(2022-08-10 00:47:08) Arquero lanza tres flechas a Silence
+(2022-08-10 00:47:08) Silence ahora tiene 26.666666666667 de vida
+(2022-08-10 00:47:08) Silence ataca con la espada a Arquero
+(2022-08-10 00:47:08) Arquero ahora tiene 33.333333333333 de vida
+(2022-08-10 00:47:08) Arquero lanza tres flechas a Silence
+(2022-08-10 00:47:08) Silence ahora tiene 13.333333333333 de vida

@@ -1,7 +1,7 @@
 <?php
 namespace Source;
 
-use Helpers\Message;
+use Source\Log;
 use Source\Armors\Armor;
 use Source\Weapons\Weapon;
 use Source\Armors\BronzeArmor;
@@ -43,7 +43,7 @@ class Unit
      */
     public function move(string $direction): void
     {
-        Message::show("{$this->name} avanza hacia {$direction}");
+        Log::info("{$this->name} avanza hacia {$direction}");
     }
 
     /**
@@ -53,7 +53,7 @@ class Unit
      */
     public function die(): void
     {
-        Message::show("{$this->name} muere");
+        Log::info("{$this->name} muere");
         exit();
     }
 
@@ -77,7 +77,7 @@ class Unit
     {
         $this->health = $health;
 
-        Message::show("{$this->getName()} ahora tiene {$this->getHealth()} de vida");
+        Log::info("{$this->getName()} ahora tiene {$this->getHealth()} de vida");
 
         return $this;
     }
@@ -105,7 +105,7 @@ class Unit
      */
     public function setArmor(?Armor $armor): self
     {
-        Message::show($this->getName() . " ahora tiene una armadura.");
+        Log::info($this->getName() . " ahora tiene una armadura.");
         $this->armor = $armor;
 
         return $this;
@@ -120,7 +120,7 @@ class Unit
     public function attack(Unit $opponent): void
     {
         $attack = $this->weapon->createAttack();
-        Message::show($attack->getDescription($this, $opponent));
+        Log::info($attack->getDescription($this, $opponent));
         $opponent->takeDamage($attack);
     }
 

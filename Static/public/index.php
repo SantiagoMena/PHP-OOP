@@ -16,6 +16,9 @@ Translator::set([
     'WeaponAttack' => ':unit ataca a :opponent',
 ]);
 
+Log::setLogger(new FileLogger);
+Log::setLogger(new HtmlLogger);
+
 $silence = Unit::createSoldier()
             ->setArmor(new SilverArmor);
 
