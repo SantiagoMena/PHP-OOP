@@ -16,7 +16,9 @@ Translator::set([
     'WeaponAttack' => ':unit ataca a :opponent',
 ]);
 
-$silence = Unit::createSoldier();
+$silence = Unit::createSoldier()
+            ->setArmor(new SilverArmor);
+
 $silence->move("el norte");
 
 $arquero = new Unit("Arquero", new CrossBow);

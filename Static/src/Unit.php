@@ -103,10 +103,12 @@ class Unit
      * @param [type] $armor
      * @return void
      */
-    public function setArmor(?Armor $armor)
+    public function setArmor(?Armor $armor): self
     {
         Message::show($this->getName() . " ahora tiene una armadura.");
         $this->armor = $armor;
+
+        return $this;
     }
 
     /**
