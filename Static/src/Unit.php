@@ -13,6 +13,7 @@ use Source\Armors\MissingArmor;
  */
 class Unit
 {
+    const MAX_DAMAGE = 1200;
     protected float $health = 40;
     protected string $name;
     protected ?Armor $armor = null;
@@ -73,9 +74,13 @@ class Unit
      * @param float $health
      * @return self
      */
-    public function setHealth(float $health): self
+    public function setHealth(float $damage): self
     {
-        $this->health = $health;
+        if($damage > static::MAX_DAMAGE) {
+            $damage = static::MAX_DAMAGE;
+        }
+
+        $this->health = $this->health - $damage;
 
         Log::info("{$this->getName()} ahora tiene {$this->getHealth()} de vida");
 
@@ -90,7 +95,8 @@ class Unit
      */
     public function takeDamage(Attack $attack): void
     {
-        $this->setHealth($this->health - $this->armor->absorbDamage($attack));
+
+        $this->setHealth($this->armor->absorbDamage($attack));
         
         if($this->health <= 0) {
             $this->die();
