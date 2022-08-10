@@ -156,3 +156,12 @@ En PHP 7, llamar a métodos no estáticos de forma estática está obsoleto y ge
 - >No se puede acceder a las propiedades estáticas a través del objeto utilizando el operador flecha (->).
 
 - >Como cualquier otra variable estática de PHP, las propiedades estáticas sólo pueden ser inicializadas utilizando un string literal o una constante; las expresiones no están permitidas. Por tanto, **se puede inicializar una propiedad estática con enteros o arrays (por ejemplo), pero no se puede hacer con otra variable**, con el valor de devolución de una función, o con un objeto.
+
+## Named constructors
+
+Para crear un constructor semántico sólo tienes que crear un método estático que cree y retorne una nueva instancia de una clase. Un named constructor es a su vez un método factory.
+
+## Fluent interfaces
+
+Para crear interfaces fluidas sólo tienes que recordar retornar $this luego de cada función. Las interfaces fluidas suelen usarse para métodos que modifican el estado de un objeto (como un setter).
+
