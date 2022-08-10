@@ -172,3 +172,7 @@ Para crear interfaces fluidas sólo tienes que recordar retornar $this luego de 
 - >El principio SOLID: Open-closed (principio abierto/cerrado) establece que las clases u otra entidad de software deben estar abiertas para su extensión y cerradas para su modificación.
 
 - >El principio SOLID Dependency inversion (principio de inversión de la dependencia) nos indica que debemos depender de abstracciones en vez de implementaciones concretas.
+
+### Constantes
+
+Para declarar constantes en una clase se usa el operador `const` y se puede acceder a estas con `static::CONST_NAME`. Se usan para evitar número o cadenas magicas (constantes explicitas en el código).
