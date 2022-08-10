@@ -4,6 +4,8 @@ namespace Source;
 use Helpers\Message;
 use Source\Armors\Armor;
 use Source\Weapons\Weapon;
+use Source\Armors\BronzeArmor;
+use Source\Weapons\BasicSword;
 use Source\Armors\MissingArmor;
 
 /**
@@ -136,5 +138,13 @@ class Unit
     public function getWeapon(): Weapon
     {
         return $this->weapon;
+    }
+
+    public static function createSoldier(): self
+    {
+        $soldier = new Unit("Silence", new BasicSword);
+        $soldier->setArmor(new BronzeArmor);
+
+        return $soldier;
     }
 }
