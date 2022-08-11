@@ -11,6 +11,10 @@ $user->fill([
     'last_name' => 'Doe',
     'nickname' => 'jhondoe'
 ]);
-echo "Nickname: {$user->nickname}\n";
+
 echo "Bienvenido {$user->first_name} {$user->last_name}\n";
-print_r($user->getAttributes());
+
+
+if($user->nickname){
+    echo "Nickname: {$user->nickname}\n";
+}

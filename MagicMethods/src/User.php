@@ -15,19 +15,25 @@ class User
             return $this->attributes[$name];
         }
     }
-    public function __get($name)
-    {
-        return $this->getAttribute($name);
-    }
 
     public function setAttribute($name, $value)
     {
         $this->attributes[$name] = $value;
     }
 
+    public function __get($name)
+    {
+        return $this->getAttribute($name);
+    }
+
     public function __set($name, $value)
     {
         $this->setAttribute($name, $value);
+    }
+
+    public function __isset($name)
+    {
+        return isset($this->attributes[$name]);
     }
 
     public function getAttributes(): array
