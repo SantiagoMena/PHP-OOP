@@ -176,3 +176,21 @@ Para crear interfaces fluidas sólo tienes que recordar retornar $this luego de 
 ### Constantes
 
 Para declarar constantes en una clase se usa el operador `const` y se puede acceder a estas con `static::CONST_NAME`. Se usan para evitar número o cadenas magicas (constantes explicitas en el código).
+
+## Métodos mágicos
+
+### __get
+
+Se usa para retornar el valor de un atributo sobreescribiendo la función al momento de usar `$objeto->atributo;`
+
+### __set
+
+Se usa para asignar valor a un atributo sobreescribiendo la función al momento de usar `$objeto->atributo = $valor;`
+
+### __isset
+
+Se usa para verificar si está creado un atributo sobreescribiendo la función al momento de usar `isset($objeto->atributo)`
+
+### __unset
+
+Se usa para eliminar un atributo sobreescribiendo la función al momento de usar `unset($objeto->atributo)`
