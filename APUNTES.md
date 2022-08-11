@@ -179,18 +179,18 @@ Para declarar constantes en una clase se usa el operador `const` y se puede acce
 
 ## Métodos mágicos
 
-### __get
+### __get($name)
 
 Se usa para retornar el valor de un atributo sobreescribiendo la función al momento de usar `$objeto->atributo;`
 
-### __set
+### __set($name, $value)
 
 Se usa para asignar valor a un atributo sobreescribiendo la función al momento de usar `$objeto->atributo = $valor;`
 
-### __isset
+### __isset($name)
 
 Se usa para verificar si está creado un atributo sobreescribiendo la función al momento de usar `isset($objeto->atributo)`
 
-### __unset
+### __unset($name)
 
 Se usa para eliminar un atributo sobreescribiendo la función al momento de usar `unset($objeto->atributo)`
