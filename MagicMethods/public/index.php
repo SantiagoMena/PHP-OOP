@@ -14,6 +14,7 @@ $user->fill([
 
 echo "Bienvenido {$user->first_name} {$user->last_name}\n";
 
+unset($user->nickname);
 
 if($user->nickname){
     echo "Nickname: {$user->nickname}\n";

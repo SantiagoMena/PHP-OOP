@@ -36,6 +36,11 @@ class User
         return isset($this->attributes[$name]);
     }
 
+    public function __unset($name)
+    {
+        unset($this->attributes[$name]);
+    }
+
     public function getAttributes(): array
     {
         return $this->attributes;
