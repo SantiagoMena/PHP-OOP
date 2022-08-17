@@ -2,6 +2,7 @@
 namespace Source;
 
 use Source\User;
+use Source\HtmlNode;
 
 require __DIR__.'/../vendor/autoload.php';
 
@@ -19,3 +20,13 @@ unset($user->nickname);
 if($user->nickname){
     echo "Nickname: {$user->nickname}\n";
 }
+
+// Test: __call() & __callStatic()
+$nodeName = (new HtmlNode('input'))
+                ->name('first_name')
+                ->type('text');
+
+$nodeMessage = HtmlNode::textarea("Message")->name('message');
+
+echo $nodeName->render()."\n";
+echo $nodeMessage->render()."\n";

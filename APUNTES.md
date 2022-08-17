@@ -194,3 +194,11 @@ Se usa para verificar si está creado un atributo sobreescribiendo la función a
 ### __unset($name)
 
 Se usa para eliminar un atributo sobreescribiendo la función al momento de usar `unset($objeto->atributo)`
+
+### __call(string $metodo, array $args)
+
+>Es el método mágico de PHP que se invocará cuando se intenta llamar a un método que no está definido en el objeto.
+
+### __callStatic(string $metodo, array $args)
+
+>Es el método mágico que se invocará cuando se intenta llamar a un inaccesible o no disponible método en el contexto de una clase, es decir, estamos llamando un método estático que no existe en la clase
