@@ -30,3 +30,9 @@ $nodeMessage = HtmlNode::textarea("Message")->name('message');
 
 echo $nodeName->render()."\n";
 echo $nodeMessage->render()."\n";
+
+// Test: __toString();
+
+echo $nodeMessage;
+
+var_dump($nodeName('name'));

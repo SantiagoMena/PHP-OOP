@@ -202,3 +202,11 @@ Se usa para eliminar un atributo sobreescribiendo la función al momento de usar
 ### __callStatic(string $metodo, array $args)
 
 >Es el método mágico que se invocará cuando se intenta llamar a un inaccesible o no disponible método en el contexto de una clase, es decir, estamos llamando un método estático que no existe en la clase
+
+### __toString()
+
+>Se usa para que la clase pueda decidir qué comportamiento tendrá cuando sea usada como si fuera una cadena o transformada en una cadena.
+
+### __invoke()
+
+>El método __invoke() es llamado cuando un script intenta llamar a un objeto como si fuera una función.

@@ -12,6 +12,21 @@ class HtmlNode
         $this->attributes = $attributes;
     }
 
+    public function get(string $name, $default)
+    {
+        return $this->attributes[$name] ?? $default;
+    }
+
+    public function __invoke(string $name, $default = null)
+    {
+        return $this->get($name, $default);
+    }
+
+    public function __toString()
+    {
+        return $this->render();
+    }
+
     public function __call(string $method, array $args = [])
     {
         if(!isset($args[0])) {
