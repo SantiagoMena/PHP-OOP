@@ -1,23 +1,29 @@
 <?php
 namespace Source;
 
+use Source\LunchBox;
+
 class User extends Model
 {
-    public $id = 5;
-    private $dbPassword = 'secret';
-    private $table = 'table';
-    public function getFirstNameAttribute($value)
-    {
-        return strtoupper($value);
+    protected $lunch;
+    
+    public function __construct(array $attributes = []) {
+        parent::__construct($attributes);
+
+        $this->lunch = new LunchBox();
     }
 
-    public function __sleep()
+    public function setLunch(LunchBox $lunch)
     {
-        return ['attributes', 'table'];
+        $this->lunch = $lunch;
     }
-
-    public function __wakeup()
+     
+    public function eat()
     {
-        $this->attributes['first_name'] = strtoupper($this->attributes['first_name']);
+        if($this->lunch->isEmpty()) {
+            throw new \Exception("{$this->name} no tiene nada para comer!");
+        }
+
+        echo "{$this->name} almuerza {$this->lunch->shift()} \n";
     }
 }
