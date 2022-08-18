@@ -213,5 +213,8 @@ Se usa para eliminar un atributo sobreescribiendo la función al momento de usar
 
 ### __sleep()
 
+Determina que atributos serán serializados al usar *serialize()* retornando un array de la lista de atributos.
+
 ### __wakeup()
 
+Permite manipular el objeto que va a mostrarse cuando se deserializa un objeto al usar *unserialize()
