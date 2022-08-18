@@ -4,6 +4,7 @@ namespace Source;
 class LunchBox
 {
     protected $food = [];
+    protected $original = true;
 
     public function __construct(array $food = []) {
     $this->food = $food;
@@ -17,5 +18,10 @@ class LunchBox
     public function isEmpty()
     {
         return empty($this->food);
+    }
+
+    public function __clone()
+    {
+        $this->original = false;
     }
 }
