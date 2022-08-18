@@ -33,6 +33,13 @@ echo $nodeMessage->render()."\n";
 
 // Test: __toString();
 
-echo $nodeMessage;
+echo $nodeMessage."\n";
 
-var_dump($nodeName('name'));
+echo $nodeName('name')."\n";
+
+// Test: __sleep() && __wakeup()
+$user = new User(['first_name' => 'Test']);
+$result = serialize($user);
+$data = unserialize($result);
+
+echo serialize($data)."\n";

@@ -210,3 +210,8 @@ Se usa para eliminar un atributo sobreescribiendo la función al momento de usar
 ### __invoke()
 
 >El método __invoke() es llamado cuando un script intenta llamar a un objeto como si fuera una función.
+
+### __sleep()
+
+### __wakeup()
+
