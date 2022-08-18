@@ -218,3 +218,9 @@ Determina que atributos serán serializados al usar *serialize()* retornando un 
 ### __wakeup()
 
 Permite manipular el objeto que va a mostrarse cuando se deserializa un objeto al usar *unserialize()
+
+### __clone
+
+>Una vez que la clonación ha finalizado, se llamará al método __clone() del nuevo objeto (si el método __clone() estuviera definido), para permitirle realizar los cambios necesarios sobre sus propiedades.
+
+**NOTA: Los objetos se pasan por referencia**
