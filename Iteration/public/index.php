@@ -16,4 +16,4 @@ $lunchBox = new LunchBox(['Sandwich', 'Papas']);
 $joanne->setLunch($lunchBox);
 
 // Escuela
-$joanne->eat();
+$joanne->eatMeal();

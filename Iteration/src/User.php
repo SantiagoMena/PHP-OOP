@@ -26,4 +26,11 @@ class User extends Model
 
         echo "{$this->name} almuerza {$this->lunch->shift()} \n";
     }
+
+    public function eatMeal()
+    {
+        foreach ($this->lunch as $key => $food) {
+            echo "{$this->name}  $key ===> {$food}\n";
+        }
+    }
 }
