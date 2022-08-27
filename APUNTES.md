@@ -224,3 +224,17 @@ Permite manipular el objeto que va a mostrarse cuando se deserializa un objeto a
 >Una vez que la clonación ha finalizado, se llamará al método __clone() del nuevo objeto (si el método __clone() estuviera definido), para permitirle realizar los cambios necesarios sobre sus propiedades.
 
 **NOTA: Los objetos se pasan por referencia**
+
+## Iteración de objetos
+
+>A partir de PHP 5 es posible iterar objetos como si se tratara de un array asociativo. En este caso la iteración se hará por defecto sobre las **propiedades públicas** del objeto. Pero en algunos casos queremos un comportamiento diferente y para ello PHP ofrece 2 interfaces: **Iterator** y **IteratorAggregate**.
+
+### Interface Iterator
+
+Es una interface para hacer un objeto iterable.
+
+### Interface IteratorAggregate
+
+Es una interface que nos permite hacer un objeto iterable implementando sólo una función.
+
+### Interface Countable
