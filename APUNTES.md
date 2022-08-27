@@ -238,3 +238,5 @@ Es una interface para hacer un objeto iterable.
 Es una interface que nos permite hacer un objeto iterable implementando sólo una función.
 
 ### Interface Countable
+
+Es una interface que permite hacer contable un objeto
