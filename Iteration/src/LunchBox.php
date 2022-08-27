@@ -1,8 +1,8 @@
 <?php
 namespace Source;
-use Iterator;
+use ArrayIterator;
 
-class LunchBox implements Iterator
+class LunchBox implements \IteratorAggregate
 {
     protected $food = [];
     protected $original = true;
@@ -26,28 +26,8 @@ class LunchBox implements Iterator
         $this->original = false;
     }
 
-    public function all()
+    public function getIterator(): ArrayIterator
     {
-        return $this->food;
-    }
-
-    function rewind(): void {
-        reset($this->food);
-    }
-    
-    function current(): mixed {
-        return current($this->food);
-    }
-
-    function key(): mixed {
-        return key($this->food);
-    }
-
-    function next(): void {
-        next($this->food);
-    }
-
-    function valid(): bool {
-        return key($this->food) !== null;
+        return new ArrayIterator($this->food);
     }
 }
