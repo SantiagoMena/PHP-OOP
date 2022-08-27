@@ -33,7 +33,7 @@ Repositorio para afianzar conocimiento sobre la programación orientada a objeto
 
 ## Parte 4: Complementos
 
-- [ ] Iteración de objetos
+- [X] Iteración de objetos
 - [ ] Objetos inmutables
 - [ ] Comparación entre objetos
 - [ ] Creación y uso de traits en PHP
