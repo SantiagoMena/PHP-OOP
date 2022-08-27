@@ -16,4 +16,5 @@ $lunchBox = new LunchBox(['Sandwich', 'Papas']);
 $joanne->setLunch($lunchBox);
 
 // Escuela
+echo "{$joanne->name} tiene en su caja de almuerzo ". count($lunchBox) ." alimentos\n";
 $joanne->eatMeal();

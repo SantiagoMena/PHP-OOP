@@ -2,7 +2,7 @@
 namespace Source;
 use ArrayIterator;
 
-class LunchBox implements \IteratorAggregate
+class LunchBox implements \IteratorAggregate, \Countable
 {
     protected $food = [];
     protected $original = true;
@@ -29,5 +29,10 @@ class LunchBox implements \IteratorAggregate
     public function getIterator(): ArrayIterator
     {
         return new ArrayIterator($this->food);
+    }
+
+    public function count(): int
+    {
+        return count($this->food);
     }
 }
