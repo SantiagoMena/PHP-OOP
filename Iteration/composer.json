@@ -1,0 +1,12 @@
+{
+    "name": "source/magic-methods",
+    "description": "Métodos Mágicos",
+    "type": "project",
+    "license": "MIT",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Source\\": "src/"
+        }
+    }
+}
