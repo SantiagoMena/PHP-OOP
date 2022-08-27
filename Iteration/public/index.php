@@ -4,17 +4,21 @@ require '../vendor/autoload.php';
 
 use Source\User;
 use Source\LunchBox;
+use Source\Food;
 
 $gordon = new User(['name' => 'Gordon']);
 
 // Hija
 $joanne = new User(['name' => 'Joanne']);
 
-$lunchBox = new LunchBox(['Sandwich', 'Papas']);
+$lunchBox = new LunchBox([
+    new Food(['name' => 'Sandwich']), 
+    new Food(['name' => 'Papas']), 
+    new Food(['name' => 'Jugo de Naranja', 'beverage' => true]), 
+]);
 
 // Casa
 $joanne->setLunch($lunchBox);
 
 // Escuela
-echo "{$joanne->name} tiene en su caja de almuerzo ". count($lunchBox) ." alimentos\n";
 $joanne->eatMeal();

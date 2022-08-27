@@ -240,3 +240,7 @@ Es una interface que nos permite hacer un objeto iterable implementando sólo un
 ### Interface Countable
 
 Es una interface que permite hacer contable un objeto
+
+## Objetos inmutables
+
+>Cuando trabajamos con objetos algunas veces es necesario que los métodos que interactuan con ellos no modifiquen su estado, esto es lo que llamamos objetos inmutables.

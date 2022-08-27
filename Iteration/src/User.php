@@ -29,8 +29,22 @@ class User extends Model
 
     public function eatMeal()
     {
-        foreach ($this->lunch as $key => $food) {
-            echo "{$this->name}  $key ===> {$food}\n";
+        echo "{$this->name} tiene en su caja de almuerzo ". $this->lunch->count() ." alimentos\n";
+
+        $food = $this->lunch->filter(function($item) {
+            return ! $item->beverage;
+        });
+
+        $beverage = $this->lunch->filter(function($item) {
+            return $item->beverage;
+        });
+
+        foreach ($food as $item) {
+            echo "{$this->name} come {$item->name}\n";
+        }
+
+        foreach ($beverage as $item) {
+            echo "{$this->name} toma {$item->name}\n";
         }
     }
 }
