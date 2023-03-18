@@ -55,3 +55,31 @@ El patrón se utiliza en los casos siguientes:
 
 - Una clase que solo conoce los objetos con los que tiene relaciones.
 - Una clase que quiere transmitir a sus subclases las elecciones de instanciación aprovechando un mecanismo de polimorfismo.
+
+### Prototype
+
+El objetivo de este patrón es la creación de nuevos objetos mediante la duplicación de objetos existentes llamados prototipos que disponen la capacidad de clonación.
+
+Ejemplo:
+
+    Durante la compra de un vehículo, un cliente debe recibir una documentación compuesta por un número concreto de documentos tales como el certificado de cesión, la solicitud de matriculación o incluso la orden de pedido. Existen otros tipos de documentos que pueden incluirse o excluirse a esta documentación en función de las necesidades de gestión o de cambios de reglamentación. Introducimos una clase `Documentacion` cuyas instancias son documentaciones compuestas por diversos documentos obligatorios. Para cada tipo de documento, incluimos su clase correspondiente.
+
+    Creamos un modelo de documentación que consiste en una instancia particular de la clase `Documentacion` y que contiene los distintos documentos necesarios, documentos en blanco. Llamamos a esta documentación "documentación en blanco". De este modo definimos a nivel de las instancias, y no a nivel de las clases, el contenido preciso de la documentación que debe recibir un cliente. Incluir o excluir un documento de la documentación en blanco no supone ninguna modificación a su clase.
+
+    Una vez presentada la documentación en blanco, recurrimos al proceso de clonación para crear las nuevas documentaciones. cada nueva documentación se crea duplicando todos los documentos de la documentación en blanco.
+
+    Esta técnica basada en objetos que poseen la capacidad de clonación utiliza el patron `Prototype`, y los documentos constituyen distintos prototipos.
+
+    La clase `Documento` es una clase abstracta conocida por la clase `Documentacion`. Sus subclases corresponden a los distintos tipos de documentos. Incluyen un método `duplica` que permite clonar una instancia existente para obtener una nueva.
+
+    La clase `Documentacion` también es abstracta. Posee dos subclases concretas:
+    
+    - La clase `DocumentacionEnBlanco`, que posee una única instancia que contiene todos los documentos necesarios (documentos en blanco). Esta instancia se manipula mediante los métodos `agrega` y `elimina`.
+    - La clase `DocumentacionCliente`, cuyo conjunto de documentos se crea solicitando a la única instancia de la clase `DocumentacionEnBlanco` la lista de documentos en blanco y agregándolos uno a uno tras haberlos clonado.
+
+Dominios de uso:
+El patron `Prototype` se utiliza en los dominios siguientes:
+
+- Un sistema de objetos debe crear instancias sin conocer la jerarquía de clases que las describe.
+- Un sistema de objetos debe crear instancias de clases dinámicamente.
+- El sistema de objetos debe permanecer simple y no incluir una jerarquía paralela de la clase de fabricación.
