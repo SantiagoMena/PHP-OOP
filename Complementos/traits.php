@@ -40,6 +40,7 @@ class MountedArcher
 {
     use CanRide, CanPerformBasicActions {
         CanRide::move insteadof CanPerformBasicActions;
+        CanRide as ride;
     }
 
     use CanShootArrows;
@@ -51,3 +52,4 @@ $archer->shootArrow();
 $mountedArcher = new MountedArcher();
 $mountedArcher->shootArrow();
 $mountedArcher->move();
+$mountedArcher->ride();
