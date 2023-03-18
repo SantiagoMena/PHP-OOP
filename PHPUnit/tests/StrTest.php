@@ -3,7 +3,7 @@ use Php\PhpUnit\Str;
 
 class StrTest extends PHPUnit\Framework\TestCase
 {
-    public function test_test()
+    public function test_studly()
     {
         $this->assertSame(
             'Name', 
