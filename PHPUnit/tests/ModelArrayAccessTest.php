@@ -5,11 +5,13 @@ class ModelArrayAccessTest  extends PHPUnit\Framework\TestCase
 {
     public function test_offset_get()
     {
-        $user = new UserTest([
+        $user = new class([
             'first_name' => 'Santiago',
             'last_name' => 'Mena',
             'age' => 27,
-        ]);
+        ]) extends Model{
+
+        };
 
         $this->assertSame('Santiago', $user['first_name']);
         $this->assertSame('Mena', $user['last_name']);
