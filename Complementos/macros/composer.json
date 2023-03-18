@@ -1,0 +1,16 @@
+{
+    "name": "php/macros",
+    "autoload": {
+        "psr-4": {
+            "Php\\Macros\\": "src/",
+            "Php\\Componentes\\": "componentes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Santiago Mena",
+            "email": "santiagomenape@gmail.com"
+        }
+    ],
+    "require": {}
+}
