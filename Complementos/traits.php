@@ -10,6 +10,7 @@ trait CanPerformBasicActions
 
 trait CanShootArrows
 {
+    public $arrows = 50;
     public function shootArrow()
     {
         echo "Disparó una flecha\n";
@@ -52,4 +53,6 @@ $archer->shootArrow();
 $mountedArcher = new MountedArcher();
 $mountedArcher->shootArrow();
 $mountedArcher->move();
-$mountedArcher->ride();
+
+
+echo $mountedArcher->arrows;
