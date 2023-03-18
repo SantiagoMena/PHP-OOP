@@ -172,3 +172,16 @@ Dominios de aplicación
 - Es necesario representar jerarquías de composición en un sistema
 - Los clientes de una composición deben ignorar si se comunican con objetos compuestos o no.
 
+### Decorator
+
+El objetivo del patrón `Decorator` es agregar dinámicamente funcionalidades sumplementarias a un objeto. Esta agregación de funcionalidades no modifica la interfaz del objeto y es transparente de cara a los clientes.
+
+El patrón `Decorator` constituye una alternativa respecto a la creación de una subclase para enriquecer el objeto.
+
+Ejemplo
+
+    El sistema de venta de vehículos dispone de una clase `VistaCatalogo` que muestra, bajo el formato de un catálogo electrónico, los vehículos disponibles en una página web.
+
+    Queremos a continuación, visualizar datos suplementarios para los vehículos "de alta gama", a saber la información técnica ligada al modelo. Para agregar esta funcionalidad, podemos crear una subclase de visualización especifica para los vehículos "de alta gama". Ahoram queremos mostrar el logotipo de la marca en los vehículos "de gamas media y alta". Conviene crear una nueva subclase para estos vehículos, súperclase de la clase de vehículos "de alta gama" lo cual se vuelve rápidamente complejo.
+
+    El patrón `Decorator` proporciona otro enfoque que consiste en agregar un nuevo objeto llamado decorador que se constituye por el objeto inicial y que lo referencia. Este decorador posee la misma interfaz, lo cual vuelve a la sustitución transparente de cara a los clientes. En nuestro caso, el método `visualiza`lo interpreta el decorador, que solicita al objeto inicial su visualización y la enriquece con información complementaria.
