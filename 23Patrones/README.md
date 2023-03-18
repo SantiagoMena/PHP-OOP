@@ -9,7 +9,7 @@ Libro "Patrones de diseño en PHP - Los 23 modelos de diseño" de ediciones ENI.
 - [x] Abstract Factory
 - [x] Builder
 - [x] Factory Method
-- [ ] Prototype
+- [x] Prototype
 - [ ] Singleton
 
 ## Patrones de estructuración
@@ -36,7 +36,3 @@ Libro "Patrones de diseño en PHP - Los 23 modelos de diseño" de ediciones ENI.
 - [ ] Composición y variación de patrones
 - [ ] Composite MVC
 - [ ] Los patrones en el diseño de aplicaciones
-
-## Patrones de comportamiento
-
-- [ ] 
