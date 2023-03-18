@@ -20,9 +20,11 @@ class ModelArrayAccessTest  extends PHPUnit\Framework\TestCase
 
     public function test_offset_exist()
     {
-        $user = new UserTest([
+        $user = new class([
             'first_name' => 'Santiago',
-        ]);
+        ]) extends Model {
+
+        };
 
         $this->assertTrue(isset($user->first_name));
         $this->assertFalse(empty($user->first_name));
@@ -34,7 +36,7 @@ class ModelArrayAccessTest  extends PHPUnit\Framework\TestCase
     /** @test */
     public function it_set_adn_get_values_with_array_access()
     {
-        $user = new UserTest();
+        $user = new class() extends Model{};
         $user['first_name'] = 'Santiago';
 
         $this->assertSame('Santiago', $user->first_name);
@@ -43,7 +45,7 @@ class ModelArrayAccessTest  extends PHPUnit\Framework\TestCase
 
     public function test_offset_unset()
     {
-        $user = new UserTest;
+        $user = new class extends Model{};
         $user['first_name'] = 'Santiago';
 
         $this->assertTrue((isset($user['first_name'])));

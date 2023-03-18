@@ -48,4 +48,4 @@ Repositorio para afianzar conocimiento sobre la programación orientada a objeto
 
 - [x] Introducción al desarrollo con pruebas
 - [x] Array Access
-- [ ] Clases anónimas
+- [x] Clases anónimas
