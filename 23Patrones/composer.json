@@ -1,0 +1,16 @@
+{
+    "name": "php/oop",
+    "description": "Design Patterns PHP",
+    "autoload": {
+        "psr-4": {
+            "Php\\Oop\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Santiago Mena",
+            "email": "santiagomenape@gmail.com"
+        }
+    ],
+    "require": {}
+}
