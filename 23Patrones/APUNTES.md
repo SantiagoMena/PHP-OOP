@@ -27,3 +27,13 @@ Ejemplo:
 ### Builder
 
 El objetivo del patron `Builder` es abstraer la construcción de objetos complejos de su implementación, de modo que un cliente pueda crear objetos complejos sin tener que preocuparse de las diferencias de su implementación.
+
+Ejemplo:
+
+    Durante la compra del vehículo, el vendedor crea todo un conjunto de documentos que contienen en especial la solicitud de pedido y la solicitud de matriculación del cliente. Es posible construir estos documentos en formato HTML o en formato PDF, según la elección del cliente. En el primer caso, el cliente provee una instancia de la clase `ConstructorDocumentacionVehiculoHtml` y, en el segundo caso, una instancia de la clase `ConstructorDocumentacionVehiculoPdf`. El vendedor realiza, a continuación la solicitud de creación de cada documento mediante esta instancia.
+
+    De este modo el vendedor genera la documentación con ayuda de los métodos `construyeSolicitudPedido` y `construyeSolicitudMatriculación`.
+
+    El vendedor puede crear las solicitudes de pedido y las solicitudes de matriculación sin conocer las subclases de `ConstructorDocumentacionVehiculo`ni las de `Documentación`.
+
+    Las relaciones de dependencia entre el cliente y las subclases de `ConstructorDocumentacionVehiculo` se explican por el hecho de que el cliente crea una instancia de estas subclases.
