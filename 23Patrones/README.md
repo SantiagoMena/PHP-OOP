@@ -6,8 +6,8 @@ Libro "Patrones de diseño en PHP - Los 23 modelos de diseño" de ediciones ENI.
 
 ## Patrones de construcción
 
-- [x] Abbstract Factory
-- [ ] Builder
+- [x] Abstract Factory
+- [x] Builder
 - [ ] Factory Method
 - [ ] Prototype
 - [ ] Singleton
