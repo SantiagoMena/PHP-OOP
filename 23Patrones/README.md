@@ -1,4 +1,4 @@
-# 23 Patrones de diseño en PHP
+# 23 Modelos de diseño en PHP
 
 Libro "Patrones de diseño en PHP - Los 23 modelos de diseño" de ediciones ENI.
 
@@ -10,7 +10,7 @@ Libro "Patrones de diseño en PHP - Los 23 modelos de diseño" de ediciones ENI.
 - [x] Builder
 - [x] Factory Method
 - [x] Prototype
-- [ ] Singleton
+- [x] Singleton
 
 ## Patrones de estructuración
 

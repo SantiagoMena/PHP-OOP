@@ -83,3 +83,18 @@ El patron `Prototype` se utiliza en los dominios siguientes:
 - Un sistema de objetos debe crear instancias sin conocer la jerarquía de clases que las describe.
 - Un sistema de objetos debe crear instancias de clases dinámicamente.
 - El sistema de objetos debe permanecer simple y no incluir una jerarquía paralela de la clase de fabricación.
+
+### Singleton
+
+El patrón `Singleton` tiene como bjetivo asegurar que una clase solo posee una instancia y proporcionar mediante un método de clase único que devuelva esta instancia.
+
+En ciertos casos es útil gestionar clases que posean una única instancia. En el marco de patrones de cosntrucción, podemos citar el caso de una fabrica de productos (patrón Abstract Factory) del que solo es necesario crear una instancia.
+
+Ejemplo:
+
+    En el sistema de venta online de vehículos, debemos gestionar clases que poseen una sola instancia.
+
+    El sistema de documentación que debe entregarse al cliente tras la compra de un vehículo (como el certificado de cesión, la solicitud de matriculación y la orden de pedido) utiliza la clase DocumentaciónEnBlanco que solo posee una instancia.
+
+    También cuando se genera un nuevo Comercial se implementa una única instancia de la clase, haciendo el método constructor privado, para que solo pueda ser instanciada mediante el método `getInstance`.
+
