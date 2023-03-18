@@ -244,3 +244,18 @@ Es una interface que permite hacer contable un objeto
 ## Objetos inmutables
 
 >Cuando trabajamos con objetos algunas veces es necesario que los métodos que interactuan con ellos no modifiquen su estado, esto es lo que llamamos objetos inmutables.
+
+## Comparación entre objetos
+
+En PHP la comparación de objetos se puede hacer por medio de:
+
+- Operador de comparación (==) donde dos objetos son iguales si tienen los mismos atributos y valores y son instancias de una misma clase.
+- Operador de igualdad (===) es una comparación estricta, es decir, dos variables serán iguales solo si hacen referencia a la misma instancia de la misma clase.
+
+## Traits
+
+PHP como muchos de los lenguajes de programación no permite el uso de herencia múltiple; por ello recurre a un mecanismo llamado Traits o rasgos que hace posible que clases independientes y pertenecientes a distintas jerarquías puedan disponer de los mismos métodos.
+
+Se puede usar `insteadof` para identificar que función usar explicitamente de un trait sobre otro.
+
+Se puede dar un alias a los métodos con un `as`.

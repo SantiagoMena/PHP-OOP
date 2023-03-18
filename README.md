@@ -39,14 +39,13 @@ Repositorio para afianzar conocimiento sobre la programación orientada a objeto
 
 - [X] Iteración de objetos
 - [X] Objetos inmutables
-- [ ] Comparación entre objetos
-- [ ] Creación y uso de traits en PHP
-- [ ] Creación de macros con traits, métodos estáticos y __call
-- [ ] Instalación y uso de componentes de terceros con Composer
+- [x] Comparación entre objetos
+- [x] Creación y uso de traits en PHP
+- [x] Creación de macros con traits, métodos estáticos y __call
+- [x] Instalación y uso de componentes de terceros con Composer
 
 ## Parte 5: Desarrollo con pruebas (PHPUnit)
 
-- [ ] Introducción al desarrollo con pruebas
-- [ ] Array Access, parte 1
-- [ ] Array Access, parte 2
-- [ ] Clases anónimas
+- [x] Introducción al desarrollo con pruebas
+- [x] Array Access
+- [x] Clases anónimas
