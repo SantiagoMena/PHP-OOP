@@ -5,7 +5,7 @@ require __DIR__ . '/../vendor/autoload.php';
 use Php\Componentes\HtmlBuilder;
 
 HtmlBuilder::macro('success', function($message){
-    return "<p>{$message}</p>";
+    return "<p>{$message}</p> {$this->hr()}";
 });
 
 $html = new HtmlBuilder();
