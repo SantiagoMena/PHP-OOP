@@ -17,7 +17,7 @@ Libro "Patrones de diseño en PHP - Los 23 modelos de diseño" de ediciones ENI.
 - [x] Adapter
 - [x] Bridge
 - [x] Composite
-- [ ] Decorator
+- [x] Decorator
 - [ ] Facade
 - [ ] Flyweight
 - [ ] Proxy
