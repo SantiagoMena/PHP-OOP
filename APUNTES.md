@@ -244,3 +244,10 @@ Es una interface que permite hacer contable un objeto
 ## Objetos inmutables
 
 >Cuando trabajamos con objetos algunas veces es necesario que los métodos que interactuan con ellos no modifiquen su estado, esto es lo que llamamos objetos inmutables.
+
+## Comparación entre objetos
+
+En PHP la comparación de objetos se puede hacer por medio de:
+
+- Operador de comparación (==) donde dos objetos son iguales si tienen los mismos atributos y valores y son instancias de una misma clase.
+- Operador de igualdad (===) es una comparación estricta, es decir, dos variables serán iguales solo si hacen referencia a la misma instancia de la misma clase.

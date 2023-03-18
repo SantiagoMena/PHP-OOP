@@ -39,7 +39,7 @@ Repositorio para afianzar conocimiento sobre la programación orientada a objeto
 
 - [X] Iteración de objetos
 - [X] Objetos inmutables
-- [ ] Comparación entre objetos
+- [x] Comparación entre objetos
 - [ ] Creación y uso de traits en PHP
 - [ ] Creación de macros con traits, métodos estáticos y __call
 - [ ] Instalación y uso de componentes de terceros con Composer
