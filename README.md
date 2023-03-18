@@ -47,6 +47,5 @@ Repositorio para afianzar conocimiento sobre la programación orientada a objeto
 ## Parte 5: Desarrollo con pruebas (PHPUnit)
 
 - [x] Introducción al desarrollo con pruebas
-- [ ] Array Access, parte 1
-- [ ] Array Access, parte 2
+- [x] Array Access
 - [ ] Clases anónimas
