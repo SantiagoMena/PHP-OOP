@@ -119,4 +119,32 @@ Ejemplo:
     Por otr lado, la agregación de documentos PDF supone un problema, pues se trata de documentos más complejos de construir y de administrar que los documentos HTML. Para ello se ha escogido un producto del mercado, aunque su interfaz no se corresponde con la interfaz `Documento`. El componente `ComponentePdf` su interfaz incluye más métodos y la nomenclatura es diferente.
 
     El patron `Adapter`proporciona una solución que consiste en crear la clase `DocumentoPdf` que implementa la interfaz `Documento` y posee una asociación con `ComponentePdf`. La implementación de los tres métodos de la interfaz `Documento` consiste en delegar correctamente las llamadas al componente PDF.
+
+### Bridge
+
+El objetivo del patrón `Bridge` es separar el aspecto de implementación de un objeto de su aspecto de representación y de interfaz.
+
+De este modo, por un lado la implementación puede encapsularse por completo y por otro lado la implementación y la representación pueden evolucionar de manera independiente y sin que ninguna suponga restricción alguna sobre la otra.
+
+Ejemplo:
+
+    Para realizar la solicitud de matriculación de un vehículo de ocasión, conviene precisa sobre esta solicitud cierta información importante como el número de placa existente. El sistema muestra un formulario para solicitar esta información.
     
+    Existen dos implementaciones de los formularios:
+    - Formularios HTML
+    - Formularios QT
+
+    La solución del patron `Bridge` consiste en separar aquellos aspectos de representación de los de la implementación y en crear dos jerarquías de clases.
+
+    Las instancias de la clase `FormularioMatriculacion` mantienen el vínculo implementación hacia una instancia que responde a la inteface `FormularioInterfaz`.
+
+    La implementación de `FormularioMatriculacion` está basada en el uso de los metodos descritos en `FormularioInterfaz`.
+
+    En cuanto a la clase `FormularioMatriculacion`, ahora es abstracta y existe una subclase concreta para cada país (`FormularioMatriculacionEspaña` y `FormularioMatriculacionPortugal`)
+
+Dominios de aplicación:
+
+- Para evitar que exista un vinculo demasiado fuerte entre la representación y su implementación, en especial cuando la implementación se selecciona en el curso de ejecución de la aplicación.
+- Para los cambios de la implementación de los objetos que no tengan impacto en las interacciones entre objetos y sus clientes.
+- Para permitir que la representación de los objetos y a su implementación conservar la capacidad de extensión mediante la creación de nuevas subclases.
+- Para evitar la jerarquía de clases.
