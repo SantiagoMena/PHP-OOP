@@ -1,0 +1,15 @@
+{
+    "name": "php/php-unit",
+    "autoload": {
+        "psr-4": {
+            "Php\\PhpUnit\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Santiago Mena",
+            "email": "santiagomenape@gmail.com"
+        }
+    ],
+    "require": {}
+}
