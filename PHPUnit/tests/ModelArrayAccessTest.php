@@ -38,6 +38,18 @@ class ModelArrayAccessTest  extends PHPUnit\Framework\TestCase
         $this->assertSame('Santiago', $user->first_name);
 
     }
+
+    public function test_offset_unset()
+    {
+        $user = new UserTest;
+        $user['first_name'] = 'Santiago';
+
+        $this->assertTrue((isset($user['first_name'])));
+
+        unset($user['first_name']);
+
+        $this->assertFalse(isset($user['first_name']));
+    }
 }
 
 class UserTest extends Model implements ArrayAccess{
@@ -58,6 +70,6 @@ class UserTest extends Model implements ArrayAccess{
 
     public function offsetUnset($offset)
     {
-        # code...
+        unset($this->$offset);
     }
 }
