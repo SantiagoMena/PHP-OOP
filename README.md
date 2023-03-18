@@ -4,7 +4,10 @@ Repositorio para afianzar conocimiento sobre la programación orientada a objeto
 
 📝[Ingresar a los Apuntes](APUNTES.md)
 
+🏗️ [23 Patrones de diseño](./23Patrones/README.md)
+
 ## Parte 1: Programación orientada a objetos desde cero
+
 - [x] clases y objetos
 - [x] Encapsulamiento, getters y setters
 - [x] Herencia y abstracción
@@ -17,6 +20,7 @@ Repositorio para afianzar conocimiento sobre la programación orientada a objeto
 - [x] Reducción de condicionales y código estructurado
 
 ## Parte 2: Métodos y propiedades estáticas y constantes
+
 - [x] Métodos y propiedades estáticos
 - [x] Constructores semánticos e interfaces fluidas
 - [x] Creación y uso de «Facades» e interfaces
