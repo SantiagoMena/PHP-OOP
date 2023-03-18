@@ -37,3 +37,21 @@ Ejemplo:
     El vendedor puede crear las solicitudes de pedido y las solicitudes de matriculación sin conocer las subclases de `ConstructorDocumentacionVehiculo`ni las de `Documentación`.
 
     Las relaciones de dependencia entre el cliente y las subclases de `ConstructorDocumentacionVehiculo` se explican por el hecho de que el cliente crea una instancia de estas subclases.
+
+### Factory Method
+
+El objetivo del patrón `Factory Method` es proveer un método abstracto de creación de un objeto delegando en las subclases concretas su creación efectiva.
+
+Ejemplo:
+
+    Vamos a centrarnos en los clientes y sus pedidos. La clase `Cliente` implementa el método `crearPedido` que debe crear el pedido. Ciertos clientes solicitan un vehículo pagando al contado y otros clientes utilizan el crédito. En función de la naturaliza del cliente, el método `crearPedido`debe crear una instancia cde clase `PedidoContado` o una instancia de la clase `PedidoCredito. Para realizar estas alternativas, el método `crearPedido` es abstracto. Ambos tipos de cliente se distinguen mediante dos subclases concretas de la  clase abstracta Cliente:
+
+    - La clase concreta `ClienteContado` cuyo método `crearPedido` crea una instancia de la clase `PedidoContado`
+    - La clase concreta `ClienteCredito` cuyo método `crearPedido` crea una instancia de la clase `PedidoCredito`.
+
+Dominios de uso:
+
+El patrón se utiliza en los casos siguientes:
+
+- Una clase que solo conoce los objetos con los que tiene relaciones.
+- Una clase que quiere transmitir a sus subclases las elecciones de instanciación aprovechando un mecanismo de polimorfismo.
