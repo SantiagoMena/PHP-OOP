@@ -13,7 +13,7 @@ class Catalogo
         return $this->fabricaVehiculo->crearScooter(marca: $marca, color: $color, potencia: $potencia);
     }
 
-    public function crearAutomovil(string $marca, string $color, int $potencia, int $espacio): AbstractAutomovil
+    public function crearAutomovil(string $marca, string $color, int $potencia, float $espacio): AbstractAutomovil
     {
         return $this->fabricaVehiculo->crearAutomovil(marca: $marca, color: $color, potencia: $potencia, espacio: $espacio);
     }
