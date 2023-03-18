@@ -86,9 +86,9 @@ El patron `Prototype` se utiliza en los dominios siguientes:
 
 ### Singleton
 
-El patrón `Singleton` tiene como bjetivo asegurar que una clase solo posee una instancia y proporcionar mediante un método de clase único que devuelva esta instancia.
+El patrón `Singleton` tiene como objetivo asegurar que una clase solo posee una instancia y proporcionar mediante un método de clase único que devuelva esta instancia.
 
-En ciertos casos es útil gestionar clases que posean una única instancia. En el marco de patrones de cosntrucción, podemos citar el caso de una fabrica de productos (patrón Abstract Factory) del que solo es necesario crear una instancia.
+En ciertos casos es útil gestionar clases que posean una única instancia. En el marco de patrones de construcción, podemos citar el caso de una fabrica de productos (patrón Abstract Factory) del que solo es necesario crear una instancia.
 
 Ejemplo:
 
@@ -136,9 +136,9 @@ Ejemplo:
 
     La solución del patron `Bridge` consiste en separar aquellos aspectos de representación de los de la implementación y en crear dos jerarquías de clases.
 
-    Las instancias de la clase `FormularioMatriculacion` mantienen el vínculo implementación hacia una instancia que responde a la inteface `FormularioInterfaz`.
+    Las instancias de la clase `FormularioMatriculacion` mantienen el vínculo implementación hacia una instancia que responde a la interface `FormularioInterfaz`.
 
-    La implementación de `FormularioMatriculacion` está basada en el uso de los metodos descritos en `FormularioInterfaz`.
+    La implementación de `FormularioMatriculacion` está basada en el uso de los métodos descritos en `FormularioInterfaz`.
 
     En cuanto a la clase `FormularioMatriculacion`, ahora es abstracta y existe una subclase concreta para cada país (`FormularioMatriculacionEspaña` y `FormularioMatriculacionPortugal`)
 
@@ -148,3 +148,27 @@ Dominios de aplicación:
 - Para los cambios de la implementación de los objetos que no tengan impacto en las interacciones entre objetos y sus clientes.
 - Para permitir que la representación de los objetos y a su implementación conservar la capacidad de extensión mediante la creación de nuevas subclases.
 - Para evitar la jerarquía de clases.
+
+### Composite
+
+El objetivo del patrón `Composite` es ofrecer un marco de diseño de una composición de objetos de profundidad variable, diseño que estará basado en un árbol.
+
+Por otro lado, esta composición está encapsulada con respecto a los clientes de los objetos que pueden interactuar sin tener que conocer la profundidad de la composición.
+
+Ejemplo:
+
+    En nuestro sistema de ventas de vehículos, queremos representar las empresas cliente, en especial para conocer el número de vehículos de los que disponen y proporcionarles ofertas de mantenimiento para su parque de vehículos.
+
+    Las empresas que posean filiales solicitan ofertas de mantenimiento que tengan en cuenta el parque de vehículos de sus filiales.
+
+    Una solución inmediata consiste en procesar de forma diferente a las empresas sin filiales y las que posean filiales. No obstante esta diferencia en el procesado entre ambos tipos de empresa vuelve a la aplicación más compleja y dependiente de la composición interna de las empresas cliente.
+
+    El patrón Composite resuelve este problema unificando ambos tipos de empresa y utilizando la composición recursiva. Esta composición recursiva es necesaria puesto que una empresa puede tener filiales que posean, ellas mismas, otras filiales. Se trata de una composición de árbol (tomamos la hipótesis de la ausencia de una filial común entre dos empresas).
+
+    La clase `Empresa` posee tres métodos públicos de los cuales solo uno es concreto y los otros dos son abstractos. El método concreto es el método `agregarVehiculo` que no depende de la composición en filiales de la empresa. En cuanto a los otros dos métodos, se implementan en las subclases concretas (`agregarFilial` solo tiene una implementación vacía en `EmpresaSinFilial`.
+
+Dominios de aplicación
+
+- Es necesario representar jerarquías de composición en un sistema
+- Los clientes de una composición deben ignorar si se comunican con objetos compuestos o no.
+
