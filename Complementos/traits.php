@@ -1,5 +1,13 @@
 <?php
 
+trait CanPerformBasicActions
+{
+    public function move()
+    {
+        echo "Caminó\n";
+    }
+}
+
 trait CanShootArrows
 {
     public function shootArrow()
@@ -16,29 +24,25 @@ trait CanRide
     }
 }
 
-class Unit
-{
-    public function move()
-    {
-        echo "Caminó\n";
-    }
-}
 
-
-class Knight extends Unit
+class Knight
 {
     use CanRide;
 }
 
-class Archer extends Unit
+class Archer
 {
-    use CanShootArrows;
+    use CanShootArrows, CanPerformBasicActions;
 
 }
 
-class MountedArcher extends Unit
+class MountedArcher
 {
-    use CanRide, CanShootArrows;
+    use CanRide, CanPerformBasicActions {
+        CanRide::move insteadof CanPerformBasicActions;
+    }
+
+    use CanShootArrows;
 }
 
 $archer = new Archer();
