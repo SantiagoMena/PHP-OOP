@@ -1,6 +1,6 @@
 <?php
 namespace Php\PhpUnit;
-class Model
+abstract class Model
 {
     public string $first_name;
     public string $last_name;
