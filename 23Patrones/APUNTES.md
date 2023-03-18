@@ -49,3 +49,9 @@ Ejemplo:
     - La clase concreta `ClienteContado` cuyo método `crearPedido` crea una instancia de la clase `PedidoContado`
     - La clase concreta `ClienteCredito` cuyo método `crearPedido` crea una instancia de la clase `PedidoCredito`.
 
+Dominios de uso:
+
+El patrón se utiliza en los casos siguientes:
+
+- Una clase que solo conoce los objetos con los que tiene relaciones.
+- Una clase que quiere transmitir a sus subclases las elecciones de instanciación aprovechando un mecanismo de polimorfismo.
