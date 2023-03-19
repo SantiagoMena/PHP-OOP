@@ -4,7 +4,7 @@ Repositorio para afianzar conocimiento sobre la programación orientada a objeto
 
 📝[Ingresar a los Apuntes](APUNTES.md)
 
-🏗️ [23 Patrones de diseño](./23Patrones/README.md)
+🏗️ [23 Patrones de diseño](./23Patrones/)
 
 ## Parte 1: Programación orientada a objetos desde cero
 
