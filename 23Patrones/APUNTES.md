@@ -185,3 +185,19 @@ Ejemplo
     Queremos a continuación, visualizar datos suplementarios para los vehículos "de alta gama", a saber la información técnica ligada al modelo. Para agregar esta funcionalidad, podemos crear una subclase de visualización especifica para los vehículos "de alta gama". Ahoram queremos mostrar el logotipo de la marca en los vehículos "de gamas media y alta". Conviene crear una nueva subclase para estos vehículos, súperclase de la clase de vehículos "de alta gama" lo cual se vuelve rápidamente complejo.
 
     El patrón `Decorator` proporciona otro enfoque que consiste en agregar un nuevo objeto llamado decorador que se constituye por el objeto inicial y que lo referencia. Este decorador posee la misma interfaz, lo cual vuelve a la sustitución transparente de cara a los clientes. En nuestro caso, el método `visualiza`lo interpreta el decorador, que solicita al objeto inicial su visualización y la enriquece con información complementaria.
+
+### Facade
+
+El objetivo del patrón `Facade`es agrupar las interfaces de un conjunto de objetos en una interfaz unificada volviendo a este conjunto más fácil de usar por parte del cliente.
+
+El patrón `Facade` encapsula la interfaz de cada objeto como interfaz de bajo nivel en una interfaz única de nivel más elevado. La construcción de la interfaz unificada puede necesitar implementar métodos destinados a componer las interfaces de bajo nivel.
+
+Ejemplo:
+
+    Queremos ofrecer la posibilidad de acceder al sistema de venta de vehículos como servicio web. El sistema está arquitecturizado bajo la forma de un conjunto de componentes que poseen su propia interfaz como:
+    
+    - El componente `Catalogo`
+    - El componente `GestionDocumento`
+
+    Es posible dar acceso al conjunto de la interfaz de estos componentes a los clientes del web.
+    El patrón `Facade` resuelve este problema proporcionando una interfaz unificada más sencilla y con un nivel de abstracción más elevado. Una clase se encarga de implementar esta interfaz unificada utilizando los componentes del sistema.
